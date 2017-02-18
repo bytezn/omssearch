@@ -42,9 +42,9 @@ Type=Perf ObjectName="Capacity and Performance" CounterName="VM Disk MB/s" Insta
 ## What is the network throughput for VM "X" and VM "Y"?
 Type=Perf (CounterName="Bytes Total/sec") (Computer="X") or (Computer="Y") | measure avg(CounterValue) by InstanceName interval 1hour
 
-## What is the current disk latency/performance of all servers beginning with "Computer"?
-Type=Perf (CounterName="Current Disk Queue Length") (Computer=*Computer*)   
-Type=Perf (CounterName="Avg. Disk sec/Read" OR CounterName="Avg. Disk sec/Write") Computer=*Computer* | measure avg(CounterValue),  max(CounterValue) by Computer Interval 20MINUTE
+## What is the current disk latency/performance of servers "X", "Y" and "Z"?
+Type=Perf (CounterName="Current Disk Queue Length") (Computer=X) OR (Computer=Y OR (Computer=Z)   
+Type=Perf (CounterName="Avg. Disk sec/Read" OR CounterName="Avg. Disk sec/Write") (Computer=X) OR (Computer=Y OR (Computer=Z) | measure avg(CounterValue),  max(CounterValue) by Computer Interval 20MINUTE
 
 ## Show me all successful web requests to webserver "X"
 Type:W3CIISLog (scStatus=200)(Computer="X")
