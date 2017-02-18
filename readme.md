@@ -1,5 +1,6 @@
-# Explore your Infrastructure with OMS Searching by Lawrance Reddy
-## Deploy at
+# Exploring your Infrastructure with OMS Searching 
+by Lawrance Reddy
+## 
 http://www.cloudlogic.expert/single-post/2016/09/05/The-Software-Defined-Datacentre
 
 
@@ -9,7 +10,7 @@ demonstrate the simplicity in being able to query complex environments with infr
 You are free to download these searches, use them and change them as you see fit.
 
 
-The Sky is the limit with OMS Analytics. Search Anything, Search Any Source, and Apply corrective action or proactive alerting to search results.
+The ##Sky is the limit with OMS Analytics##. Search Anything, Search Any Source, and Apply corrective action or proactive alerting to search results.
 
 ## How to Use these Searches
 
