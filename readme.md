@@ -1,4 +1,4 @@
-# Exploring your Infrastructure with OMS Searching by Lawrance Reddy
+# Exploring your Infrastructure with OMS Log Analytics by Lawrance Reddy
 ## 
 http://www.cloudlogic.expert/single-post/2016/09/05/The-Software-Defined-Datacentre
 
