@@ -3,8 +3,8 @@
 http://www.cloudlogic.expert/single-post/2016/09/05/The-Software-Defined-Datacentre
 
 
-This repo contains samples of OMS searches that you could use to explore your hybrid infrastructure. Part of OMS Log Analytics, these custom searches will demonstrate
-demonstrate the simplicity in being able to query complex environments with infrastructure, applications, and many other complexities. 
+This repo contains samples of OMS searches that you could use to explore your hybrid infrastructure. Using OMS Log Analytics, these custom searches provide some cool
+examples and shows how easy it is to query complex environments with infrastructure, applications, and many other complexities. 
 
 You are free to download these searches, use them and change them as you see fit.
 
