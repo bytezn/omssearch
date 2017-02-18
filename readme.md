@@ -43,6 +43,7 @@ Type=Perf (CounterName="Bytes Total/sec") (Computer=X) or (Computer=Y) | measure
 
 ## What is the current disk latency/performance of servers "X", "Y" and "Z"?
 Type=Perf (CounterName="Current Disk Queue Length") (Computer=X) OR (Computer=Y OR (Computer=Z)   
+
 Type=Perf (CounterName="Avg. Disk sec/Read" OR CounterName="Avg. Disk sec/Write") (Computer=X) OR (Computer=Y OR (Computer=Z) | measure avg(CounterValue),  max(CounterValue) by Computer Interval 20MINUTE
 
 ## Show me all successful web requests to webserver "X"
