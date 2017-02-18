@@ -30,8 +30,7 @@ The Sky is the limit with OMS Analytics. Search Anything, Search Any Source, and
  
 ## Measure the average CPU on multiple servers anywhere in my environment
 
-
-Type=Perf CounterName="% Processor Time" (Computer=*Computer*) | measure avg(CounterValue) by Computer Interval 5MINUTE
+Type=Perf CounterName="% Processor Time" (Computer=X) OR (Computer=Y) OR (Computer=Z) | measure avg(CounterValue) by Computer Interval 5MINUTE
 
 ## Tell me what VM "X" processor utilization is?
 Type=Perf ObjectName="Capacity and Performance" CounterName="% VM Processor Usage" InstanceName=X | measure avg(CounterValue) by InstanceName Interval 1HOUR
