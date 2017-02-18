@@ -1,4 +1,4 @@
-# Exploring your Infrastructure with OMS Log Analytics by Lawrance Reddy
+# Exploring your Infrastructure with simple OMS Log Searches by Lawrance Reddy
 ## 
 http://www.cloudlogic.expert/single-post/2016/09/05/The-Software-Defined-Datacentre
 
@@ -21,18 +21,26 @@ The Sky is the limit with OMS Analytics. Search Anything, Search Any Source, and
 
 4. You will require the necessary OMS Solutions installed as appropriate for the search you are running.
 
-5. Cut and paste the appropriate searches below into your OMS Workspace Search, change the values to match your environment. 
+5. Cut and paste the appropriate searches below into your OMS Workspace Search, 
+
+6. Important, change the values to match your environment. 
  
 
 
-## Active directory + domain joined file server.
-This template deploys a network with a new active directory forest and a domain joined file server. The private network sits behind a firewall. 
+## Measure the average CPU on 4 servers anywhere in my environment
+Type=Perf CounterName="% Processor Time" (Computer="Computer") OR (Computer="Computer2") OR (Computer="Computer3") OR (Computer="Computer4") | measure avg(CounterValue) by Computer Interval 5MINUTE
+or 
+Type=Perf CounterName="% Processor Time" (Computer=*Computer1*) | measure avg(CounterValue) by Computer Interval 5MINUTE
 
-## Active directory + backup dc + domain joined file server.
-This template deploys a new active directory forest with 2 domain controllers of  the same domain. A file server is  also domain joined to this network which is protected behind a firewall. 
+## Tell me what VM "X" processor utilization is?
+Type=Perf ObjectName="Capacity and Performance" CounterName="% VM Processor Usage" InstanceName=*X* | measure avg(CounterValue) by InstanceName Interval 1HOUR
+ 
 
-## Active directory + file + web servers.
-This template deploys a active directory forest with  multiple domain controllers. It also includes 2 domain  joined web servers. 
+## What is the current disk Queue length of those 4 servers causing me problems
+Type=Perf (CounterName="Current Disk Queue Length") (Computer="Computer1") OR (Computer2="Computer2") OR (Computer3") OR (Computer="Computer4")  
+or
+Type=Perf CounterName="% Processor Time" (Computer=*Computer*)
+
 
 ## File Server + custom shares using DSC
 This templates creates a active directory forest with  a file  server and automatically creates a custom  share.
